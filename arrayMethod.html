@@ -16,9 +16,10 @@
                
                 const asianCountries = response.filter(country => country.region === 'Asia');                 
                // Print the list of Asian countries
-                const asianCountryNames = asianCountries.map(country => country.name.common);                
-               console.log("The list of Asian countries")
-                console.log(asianCountryNames);
+                const asianCountryNames = asianCountries.map(country => country.name.common);  
+                console.log("The list of Asian countries")              
+               const listasianCountryNames = asianCountryNames.map(countries => console.log(countries))
+               
 
 // Task - 2 Get all the countries with a population of less than 2 lakhs using Filter method
            let populationLess2Lk = response.filter(country => country.population < '200000');
@@ -27,7 +28,7 @@
             console.log("");
             console.log("the List of countries with a population of less than 2 lakhs ")
             
-               console.log(populationLess2CountryNames);
+               const populationLess2 = populationLess2CountryNames.map(countries => console.log(countries));
 
 // Task - 3  Print the following details name, capital, flag, using forEach method
             console.log("");
@@ -51,10 +52,10 @@
                     return country.currencies && country.currencies.USD
                 });
             const dollarCountryNames = usDollar.map(country => country.name.common);                
-            console.log("");
+            console.log("-----------");
             console.log("the List of countries using United States dollar ")
-            
-               console.log(dollarCountryNames);
+            console.log("");
+               const dollarCountry = dollarCountryNames.map(countries => console.log(countries));
             }
             else{
                 console.log("The Response is Failed")
